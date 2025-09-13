@@ -1,13 +1,17 @@
 import random
 
-n = random.randint(0,10)
-guess = int(input("guess a number between 0 and 10: ")
+son = random.randint(1, 100)
+urinishlar = 0
 
-While True:
-    if n == guess :
-        print("You got mee)
+while True:
+    guess = int(input("1 dan 100 gacha son kiriting: "))
+    urinishlar += 1
+
+    if guess == son:
+        print(f"🎉 To‘g‘ri topdingiz! Son: {son}")
+        print(f"Urinishlar soni: {urinishlar}")
         break
-
-     
-
-
+    elif guess < son:
+        print("🔼 Katta son o‘ylang")
+    else:
+        print("🔽 Kichik son o‘ylang")
